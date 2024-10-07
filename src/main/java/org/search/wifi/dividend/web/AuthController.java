@@ -1,4 +1,5 @@
 package org.search.wifi.dividend.web;
 
-public class Controller {
+
+public class AuthController {
 }
