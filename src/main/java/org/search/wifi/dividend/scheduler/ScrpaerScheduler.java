@@ -4,11 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.search.wifi.dividend.model.Company;
 import org.search.wifi.dividend.model.ScrapedResult;
+import org.search.wifi.dividend.model.constants.CacheKey;
 import org.search.wifi.dividend.persist.CompanyRepository;
 import org.search.wifi.dividend.persist.DividendRepository;
 import org.search.wifi.dividend.persist.entity.CompanyEntity;
 import org.search.wifi.dividend.persist.entity.DividendEntity;
 import org.search.wifi.dividend.scraper.Scraper;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -16,6 +19,7 @@ import java.util.List;
 
 @Slf4j
 @Component
+@EnableCaching
 @AllArgsConstructor
 public class ScrpaerScheduler {
 
@@ -25,6 +29,7 @@ public class ScrpaerScheduler {
     private final Scraper yahooFinanceScraper;
 
     // 일정 주기마다 수행
+    @CacheEvict(value = CacheKey.KEY_FINANCE, allEntries = true)
     @Scheduled(cron = "${scheduler.scrap.yahoo}")
     public void yahooFinanceScheduling() {
         log.info("scraping scheduler is started");
