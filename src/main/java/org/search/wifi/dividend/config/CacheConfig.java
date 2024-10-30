@@ -22,7 +22,7 @@ public class CacheConfig {
     private String host;
 
     @Value("${spring.data.redis.port}")
-    private String port;
+    private int port;
 
     @Bean
     public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) {
@@ -42,7 +42,7 @@ public class CacheConfig {
     public RedisConnectionFactory redisConnectionFactory() {
         RedisStandaloneConfiguration conf = new RedisStandaloneConfiguration();
         conf.setHostName(host);
-        conf.setPort(Integer.parseInt(port));
+        conf.setPort(port);
         return new LettuceConnectionFactory(conf);
     }
 }
