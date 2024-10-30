@@ -1,10 +1,10 @@
-package org.search.wifi.dividend.persist.entity;
+package com.dividend.persist.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.search.wifi.dividend.model.Company;
+import com.dividend.model.Company;
 
 @Entity(name = "COMPANY")
 @Getter

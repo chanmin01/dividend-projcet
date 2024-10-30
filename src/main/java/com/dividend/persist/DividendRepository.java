@@ -1,10 +1,9 @@
-package org.search.wifi.dividend.persist;
+package com.dividend.persist;
 
-import org.search.wifi.dividend.persist.entity.DividendEntity;
+import com.dividend.persist.entity.DividendEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 

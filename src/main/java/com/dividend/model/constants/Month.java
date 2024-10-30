@@ -1,4 +1,4 @@
-package org.search.wifi.dividend.model.constants;
+package com.dividend.model.constants;
 
 public enum Month {
 

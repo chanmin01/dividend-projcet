@@ -1,6 +1,6 @@
-package org.search.wifi.dividend.persist;
+package com.dividend.persist;
 
-import org.search.wifi.dividend.persist.entity.CompanyEntity;
+import com.dividend.persist.entity.CompanyEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

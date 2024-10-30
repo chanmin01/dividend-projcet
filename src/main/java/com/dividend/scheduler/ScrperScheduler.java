@@ -1,15 +1,15 @@
-package org.search.wifi.dividend.scheduler;
+package com.dividend.scheduler;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.search.wifi.dividend.model.Company;
-import org.search.wifi.dividend.model.ScrapedResult;
-import org.search.wifi.dividend.model.constants.CacheKey;
-import org.search.wifi.dividend.persist.CompanyRepository;
-import org.search.wifi.dividend.persist.DividendRepository;
-import org.search.wifi.dividend.persist.entity.CompanyEntity;
-import org.search.wifi.dividend.persist.entity.DividendEntity;
-import org.search.wifi.dividend.scraper.Scraper;
+import com.dividend.model.Company;
+import com.dividend.model.ScrapedResult;
+import com.dividend.model.constants.CacheKey;
+import com.dividend.persist.CompanyRepository;
+import com.dividend.persist.DividendRepository;
+import com.dividend.persist.entity.CompanyEntity;
+import com.dividend.persist.entity.DividendEntity;
+import com.dividend.scraper.Scraper;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -21,7 +21,7 @@ import java.util.List;
 @Component
 @EnableCaching
 @AllArgsConstructor
-public class ScrpaerScheduler {
+public class ScrperScheduler {
 
     private final CompanyRepository companyRepository;
     private final DividendRepository dividendRepository;

@@ -1,4 +1,4 @@
-package org.search.wifi.dividend.config;
+package com.dividend.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -29,6 +29,7 @@ public class CacheConfig {
         RedisCacheConfiguration conf = RedisCacheConfiguration.defaultCacheConfig()
                 .serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(new StringRedisSerializer())) //자바에서만 호환되던 데이터를 외부에서도 사용 가능하게 직렬화(바이트 코드로 변환)
                 .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(new GenericJackson2JsonRedisSerializer()));
+
 
 
 

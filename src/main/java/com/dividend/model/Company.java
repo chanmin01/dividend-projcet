@@ -1,4 +1,4 @@
-package org.search.wifi.dividend.model;
+package com.dividend.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

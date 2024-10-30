@@ -1,4 +1,4 @@
-package org.search.wifi.dividend;
+package com.dividend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

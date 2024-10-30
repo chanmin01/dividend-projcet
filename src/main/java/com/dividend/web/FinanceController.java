@@ -1,8 +1,8 @@
-package org.search.wifi.dividend.web;
+package com.dividend.web;
 
 import lombok.AllArgsConstructor;
-import org.search.wifi.dividend.model.ScrapedResult;
-import org.search.wifi.dividend.service.FinanceService;
+import com.dividend.model.ScrapedResult;
+import com.dividend.service.FinanceService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

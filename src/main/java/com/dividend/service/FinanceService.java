@@ -1,15 +1,15 @@
-package org.search.wifi.dividend.service;
+package com.dividend.service;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.search.wifi.dividend.model.Company;
-import org.search.wifi.dividend.model.Dividend;
-import org.search.wifi.dividend.model.ScrapedResult;
-import org.search.wifi.dividend.model.constants.CacheKey;
-import org.search.wifi.dividend.persist.CompanyRepository;
-import org.search.wifi.dividend.persist.DividendRepository;
-import org.search.wifi.dividend.persist.entity.CompanyEntity;
-import org.search.wifi.dividend.persist.entity.DividendEntity;
+import com.dividend.model.Company;
+import com.dividend.model.Dividend;
+import com.dividend.model.ScrapedResult;
+import com.dividend.model.constants.CacheKey;
+import com.dividend.persist.CompanyRepository;
+import com.dividend.persist.DividendRepository;
+import com.dividend.persist.entity.CompanyEntity;
+import com.dividend.persist.entity.DividendEntity;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
@@ -26,8 +26,6 @@ public class FinanceService {
 
     // 요청이 자주 들어오는가?
     // 자주 변경되는 데이터인가?
-
-
     @Cacheable(key = "#companyName", value = CacheKey.KEY_FINANCE)
     public ScrapedResult getDividendByCompanyName(String companyName) {
         log.info("search company -> " + companyName);

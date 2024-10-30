@@ -1,9 +1,9 @@
-package org.search.wifi.dividend.web;
+package com.dividend.web;
 
 import lombok.AllArgsConstructor;
-import org.search.wifi.dividend.model.Company;
-import org.search.wifi.dividend.persist.entity.CompanyEntity;
-import org.search.wifi.dividend.service.CompanyService;
+import com.dividend.model.Company;
+import com.dividend.persist.entity.CompanyEntity;
+import com.dividend.service.CompanyService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
