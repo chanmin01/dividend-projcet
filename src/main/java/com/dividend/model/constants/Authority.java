@@ -1,6 +1,6 @@
 package com.dividend.model.constants;
 
-public enum Authrity {
+public enum Authority {
 
     ROLE_READ,
     ROLE_WRITE;
