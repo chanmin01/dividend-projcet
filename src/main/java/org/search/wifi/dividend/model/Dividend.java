@@ -1,4 +1,4 @@
-package com.dividend.model;
+package org.search.wifi.dividend.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;

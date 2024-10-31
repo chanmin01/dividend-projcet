@@ -1,12 +1,13 @@
-package com.dividend.web;
+package org.search.wifi.dividend.web;
 
 import lombok.AllArgsConstructor;
-import com.dividend.model.Company;
-import com.dividend.persist.entity.CompanyEntity;
-import com.dividend.service.CompanyService;
+import org.search.wifi.dividend.model.Company;
+import org.search.wifi.dividend.persist.entity.CompanyEntity;
+import org.search.wifi.dividend.service.CompanyService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,6 +29,7 @@ public class CompanyController {
 
     // 회사명 조회
     @GetMapping
+    @PreAuthorize("hasRole('READ')")
     public ResponseEntity<?> searchCompany(final Pageable pageable) {
         Page<CompanyEntity> coompanies = this.companyService.getAllCompany(pageable);
         return ResponseEntity.ok(coompanies);
@@ -39,6 +41,7 @@ public class CompanyController {
      * @return
      */
     @PostMapping
+    @PreAuthorize("hasRole('WRITE')")
     public ResponseEntity<?> addCompany(@RequestBody Company request) {
         String ticker = request.getTicker().trim();
         if (ObjectUtils.isEmpty(ticker)) {

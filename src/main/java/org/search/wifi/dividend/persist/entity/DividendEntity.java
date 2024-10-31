@@ -1,10 +1,10 @@
-package com.dividend.persist.entity;
+package org.search.wifi.dividend.persist.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import com.dividend.model.Dividend;
+import org.search.wifi.dividend.model.Dividend;
 
 import java.time.LocalDateTime;
 

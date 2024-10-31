@@ -1,4 +1,4 @@
-package com.dividend.config;
+package org.search.wifi.dividend.config;
 
 import org.apache.commons.collections4.Trie;
 import org.apache.commons.collections4.trie.PatriciaTrie;

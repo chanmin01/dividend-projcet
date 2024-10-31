@@ -1,4 +1,4 @@
-package com.dividend.config;
+package org.search.wifi.dividend.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;

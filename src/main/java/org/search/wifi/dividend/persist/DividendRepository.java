@@ -1,6 +1,6 @@
-package com.dividend.persist;
+package org.search.wifi.dividend.persist;
 
-import com.dividend.persist.entity.DividendEntity;
+import org.search.wifi.dividend.persist.entity.DividendEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
