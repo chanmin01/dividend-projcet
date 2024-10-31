@@ -48,7 +48,7 @@ public class TokenProvider {
      * jwt로부터 인증정보를 가져오는 메서드
      * @param jwt
      */
-    public Authentication getAuthentication(String jwt) {
+    public Authentication getAuthentification(String jwt) {
         UserDetails userDetails = this.memberService.loadUserByUsername(this.getUsername(jwt));
 
         return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
