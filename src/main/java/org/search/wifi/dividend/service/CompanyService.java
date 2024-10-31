@@ -2,6 +2,7 @@ package org.search.wifi.dividend.service;
 
 import lombok.AllArgsConstructor;
 import org.apache.commons.collections4.Trie;
+import org.search.wifi.dividend.exception.impl.NoCompanyException;
 import org.search.wifi.dividend.model.Company;
 import org.search.wifi.dividend.model.ScrapedResult;
 import org.search.wifi.dividend.persist.CompanyRepository;
@@ -85,7 +86,7 @@ public class CompanyService {
 
     public String deleteCompany(String ticker) {
         var company = this.companyRepository.findByTicker(ticker)
-                .orElseThrow(() -> new RuntimeException("존재하지 않는 회사입니다."));
+                .orElseThrow(NoCompanyException::new);
 
         this.dividendRepository.deleteAllByCompanyId(company.getId());
         this.companyRepository.delete(company);
