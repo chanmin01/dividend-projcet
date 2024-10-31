@@ -1,14 +1,14 @@
-package com.dividend.scraper;
+package org.search.wifi.dividend.scraper;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import com.dividend.model.Company;
-import com.dividend.model.Dividend;
-import com.dividend.model.ScrapedResult;
-import com.dividend.model.constants.Month;
+import org.search.wifi.dividend.model.Company;
+import org.search.wifi.dividend.model.Dividend;
+import org.search.wifi.dividend.model.ScrapedResult;
+import org.search.wifi.dividend.model.constants.Month;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;

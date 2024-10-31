@@ -1,4 +1,4 @@
-package com.dividend.config;
+package org.search.wifi.dividend.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;

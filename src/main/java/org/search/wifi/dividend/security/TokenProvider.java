@@ -1,7 +1,7 @@
-package com.dividend.security;
+package org.search.wifi.dividend.security;
 
 
-import com.dividend.service.MemberService;
+import org.search.wifi.dividend.service.MemberService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
