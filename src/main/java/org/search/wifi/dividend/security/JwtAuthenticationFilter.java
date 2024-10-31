@@ -1,4 +1,4 @@
-package com.dividend.security;
+package org.search.wifi.dividend.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

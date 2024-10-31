@@ -1,8 +1,8 @@
-package com.dividend.service;
+package org.search.wifi.dividend.service;
 
-import com.dividend.model.Auth;
-import com.dividend.model.MemberEntity;
-import com.dividend.persist.MemberRepository;
+import org.search.wifi.dividend.model.Auth;
+import org.search.wifi.dividend.model.MemberEntity;
+import org.search.wifi.dividend.persist.MemberRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;
