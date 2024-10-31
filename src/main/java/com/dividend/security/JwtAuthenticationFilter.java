@@ -18,7 +18,7 @@ import java.io.IOException;
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class JwtAuthentificationFilter extends OncePerRequestFilter {
+public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     public static final String TOKEN_HEADER = "Authorization";
     public static final String TOKEN_PREFIX = "Bearer ";
@@ -31,7 +31,7 @@ public class JwtAuthentificationFilter extends OncePerRequestFilter {
 
         if (StringUtils.hasText(token) && this.tokenProvider.validateToken(token)) {
             // 토큰 유효성 검증
-            Authentication auth = this.tokenProvider.getAuthentification(token);
+            Authentication auth = this.tokenProvider.getAuthentication(token);
             SecurityContextHolder.getContext().setAuthentication(auth);
         }
 
